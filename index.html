@@ -1,0 +1,1384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sell Surplus Electrical Equipment | SNI Industrial Surplus</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="SNI Industrial Surplus buys surplus circuit breakers, switchgear, panels, transformers and more in all 50 states. Free, no-obligation quotes and no fees. Get a fast cash offer for your electrical equipment nationwide."
+  />
+  <style>
+    :root {
+      /* Colors tuned to match the example sites: deep blue + bright accent */
+      --primary: #0056a6;        /* strong blue */
+      --primary-dark: #003c73;   /* deeper blue */
+      --accent: #f5a623;         /* orange/yellow accent */
+      --bg: #f5f7fb;
+      --text: #111827;
+      --muted: #6b7280;
+      --card-bg: #ffffff;
+      --border-radius: 10px;
+      --shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* Top bar */
+
+    .top-bar {
+      background: #0b1120;
+      color: #e5e7eb;
+      font-size: 0.85rem;
+    }
+
+    .top-bar-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.4rem 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .top-bar-left {
+      opacity: 0.9;
+    }
+
+    .top-bar-right {
+      display: flex;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .top-pill {
+      background: #111827;
+      padding: 0.18rem 0.65rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      font-size: 0.78rem;
+    }
+
+    .top-pill-accent {
+      background: var(--accent);
+      color: #111827;
+      border-color: transparent;
+      font-weight: 600;
+    }
+
+    .top-bar-right a {
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .top-bar-right span.icon {
+      font-size: 0.9rem;
+    }
+
+    /* Header / nav */
+
+    header {
+      background: #ffffff;
+      position: sticky;
+      top: 0;
+      z-index: 40;
+      box-shadow: 0 1px 6px rgba(15, 23, 42, 0.06);
+    }
+
+    .nav {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0.7rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
+
+    .logo-img {
+      height: 40px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .logo-fallback {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      background: radial-gradient(circle at 30% 20%, var(--accent), var(--primary-dark));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #f9fafb;
+      font-size: 0.9rem;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.4);
+    }
+
+    .logo span.sub {
+      font-size: 0.7rem;
+      font-weight: 500;
+      text-transform: none;
+      letter-spacing: 0.02em;
+      color: #6b7280;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1rem;
+      font-size: 0.9rem;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      position: relative;
+      padding-bottom: 2px;
+      color: #4b5563;
+    }
+
+    .nav-links a::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0%;
+      height: 2px;
+      background: var(--accent);
+      transition: width 0.18s ease;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .phone-tag {
+      font-size: 0.9rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .phone-tag span {
+      font-size: 1.05rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.5rem 1.1rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.1s ease, box-shadow 0.1s ease,
+        background 0.1s ease, color 0.1s ease, border-color 0.1s ease;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 8px 18px rgba(0, 86, 166, 0.4);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 12px 28px rgba(0, 86, 166, 0.55);
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid rgba(148, 163, 184, 0.6);
+      color: #111827;
+    }
+
+    .btn-outline:hover {
+      background: #fff7e6;
+      border-color: var(--accent);
+      color: var(--primary-dark);
+    }
+
+    /* Hero */
+
+    .hero {
+      background: radial-gradient(circle at top left, #dbeafe 0, #f5f7fb 45%, #ffffff 100%);
+      padding: 2.4rem 1rem 2.8rem;
+    }
+
+    .hero-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2.2fr);
+      gap: 2rem;
+      align-items: stretch;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.25rem 0.7rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.04);
+      font-size: 0.8rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .hero-badge span {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(245, 166, 35, 0.18);
+      font-size: 0.8rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 3vw, 2.5rem);
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.03em;
+    }
+
+    .hero h1 span {
+      color: var(--primary);
+    }
+
+    .hero-sub {
+      font-size: 0.97rem;
+      color: var(--muted);
+      max-width: 32rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .hero-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 0.5rem 1rem;
+      font-size: 0.88rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .hero-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .hero-list li span {
+      width: 18px;
+      height: 18px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: #dcfce7;
+      color: #15803d;
+      font-size: 0.8rem;
+      flex-shrink: 0;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-bottom: 0.7rem;
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    /* Hero form card */
+
+    .hero-form-card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 1.3rem 1.3rem 1.6rem;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(148, 163, 184, 0.25);
+    }
+
+    .hero-form-card h2 {
+      font-size: 1.15rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .hero-form-card p {
+      font-size: 0.83rem;
+      color: var(--muted);
+      margin-bottom: 0.8rem;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.7rem 0.8rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .form-full {
+      grid-column: 1 / -1;
+    }
+
+    label {
+      display: block;
+      font-size: 0.8rem;
+      margin-bottom: 0.2rem;
+      color: #4b5563;
+    }
+
+    input,
+    textarea,
+    select {
+      width: 100%;
+      padding: 0.5rem 0.6rem;
+      border-radius: 7px;
+      border: 1px solid #d1d5db;
+      font-size: 0.86rem;
+      outline: none;
+      background: #f9fafb;
+      transition: border 0.15s ease, box-shadow 0.15s ease,
+        background 0.15s ease;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      border-color: var(--primary);
+      background: #ffffff;
+      box-shadow: 0 0 0 1px rgba(0, 86, 166, 0.25);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 70px;
+    }
+
+    .helper {
+      font-size: 0.74rem;
+      color: var(--muted);
+      margin-top: 0.1rem;
+    }
+
+    .form-footer {
+      margin-top: 0.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .privacy {
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+
+    /* Sections */
+
+    section {
+      padding: 2.4rem 1rem;
+    }
+
+    .section-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 1.6rem;
+    }
+
+    .section-kicker {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #6b7280;
+      margin-bottom: 0.2rem;
+    }
+
+    .section-title {
+      font-size: 1.45rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .section-sub {
+      font-size: 0.9rem;
+      color: var(--muted);
+      max-width: 32rem;
+      margin: 0.3rem auto 0;
+    }
+
+    /* Cards */
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: var(--border-radius);
+      padding: 1.1rem;
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(148, 163, 184, 0.26);
+    }
+
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .card p {
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    .icon-circle {
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.45rem;
+      background: #dbeafe;
+      color: var(--primary);
+      font-size: 0.9rem;
+    }
+
+    /* What we buy */
+
+    .equipment-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 1rem;
+    }
+
+    .equip-block {
+      background: #ffffff;
+      border-radius: var(--border-radius);
+      padding: 1rem 1.1rem;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+    }
+
+    .equip-block h3 {
+      font-size: 0.95rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .equip-block h3 span {
+      font-size: 1.1rem;
+      color: var(--primary);
+    }
+
+    .equip-block ul {
+      list-style: none;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .equip-block li {
+      margin-bottom: 0.2rem;
+    }
+
+    /* How it works */
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .step {
+      background: #ffffff;
+      border-radius: var(--border-radius);
+      padding: 1rem 1.1rem;
+      border: 1px solid rgba(148, 163, 184, 0.28);
+    }
+
+    .step-number {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.35rem;
+      background: #eff6ff;
+      color: #1d4ed8;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .step h3 {
+      font-size: 0.96rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .step p {
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    /* Service areas */
+
+    .service-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1.8fr) minmax(0, 1.4fr);
+      gap: 1.5rem;
+    }
+
+    .service-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 0.6rem;
+      font-size: 0.86rem;
+    }
+
+    .service-tag {
+      background: #ffffff;
+      border-radius: 999px;
+      padding: 0.35rem 0.75rem;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      justify-content: center;
+    }
+
+    .service-tag span {
+      font-size: 0.8rem;
+      color: var(--primary);
+    }
+
+    .service-card {
+      background: #0f172a;
+      color: #e5e7eb;
+      border-radius: var(--border-radius);
+      padding: 1rem 1.2rem;
+      box-shadow: var(--shadow);
+    }
+
+    .service-card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .service-card p {
+      font-size: 0.86rem;
+      color: #cbd5f5;
+      margin-bottom: 0.5rem;
+    }
+
+    .service-card a {
+      color: #bfdbfe;
+      font-size: 0.86rem;
+      text-decoration: underline;
+    }
+
+    /* FAQ */
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.2fr);
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 800px) {
+      .faq-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .faq-item {
+      background: #ffffff;
+      border-radius: var(--border-radius);
+      padding: 0.9rem 1rem;
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      margin-bottom: 0.5rem;
+    }
+
+    .faq-item h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .faq-item p {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .faq-highlight {
+      background: #fff7e6;
+      border-radius: var(--border-radius);
+      padding: 1rem 1.1rem;
+      font-size: 0.88rem;
+      border: 1px solid rgba(245, 166, 35, 0.7);
+    }
+
+    /* Bottom CTA */
+
+    .bottom-cta {
+      background: #0b1120;
+      color: #e5e7eb;
+      padding: 2.2rem 1rem 2.6rem;
+    }
+
+    .bottom-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1.4fr);
+      gap: 1.6rem;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .bottom-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    .bottom-left h2 {
+      font-size: 1.4rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .bottom-left p {
+      font-size: 0.9rem;
+      color: #cbd5f5;
+      margin-bottom: 0.7rem;
+    }
+
+    .bottom-list {
+      list-style: none;
+      font-size: 0.85rem;
+      color: #cbd5f5;
+      margin-bottom: 1rem;
+    }
+
+    .bottom-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .bottom-list span {
+      width: 16px;
+      height: 16px;
+      border-radius: 999px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      background: #22c55e33;
+      color: #22c55e;
+    }
+
+    .bottom-tagline {
+      font-size: 0.8rem;
+      color: #9ca3af;
+    }
+
+    .bottom-contact-card {
+      background: #020617;
+      border-radius: var(--border-radius);
+      padding: 1rem 1.1rem;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      font-size: 0.86rem;
+    }
+
+    .bottom-contact-card h3 {
+      font-size: 0.98rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .bottom-contact-card p {
+      margin-bottom: 0.5rem;
+      color: #e5e7eb;
+    }
+
+    .bottom-contact-card .row {
+      margin-bottom: 0.35rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .bottom-contact-card .label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: #9ca3af;
+    }
+
+    .bottom-contact-card a {
+      color: #bfdbfe;
+    }
+
+    /* Footer */
+
+    footer {
+      background: #020617;
+      color: #6b7280;
+      font-size: 0.78rem;
+      padding: 0.9rem 1rem 1.1rem;
+    }
+
+    .footer-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-inner a {
+      color: #9ca3af;
+    }
+
+    /* Responsive tweaks */
+
+    @media (max-width: 720px) {
+      .nav-right {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .nav-links {
+        order: 2;
+      }
+      .nav-cta {
+        order: 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .form-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero {
+        padding-top: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top bar -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div class="top-bar-left">
+        Free, no-obligation quotes – turn surplus electrical into cash in all 50 states.
+      </div>
+      <div class="top-bar-right">
+        <div class="top-pill top-pill-accent">Nationwide · 100% Free to Sell</div>
+        <div class="top-pill">We buy new, used & obsolete</div>
+        <a href="tel:19567804633">
+          <span class="icon">📞</span> (956) 780-4633
+        </a>
+        <a href="mailto:rosariosamuel528@aol.com">
+          <span class="icon">✉️</span> Email us
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header / Nav -->
+  <header>
+    <div class="nav">
+      <div class="logo">
+        <!-- Replace sni-logo.png with your actual logo file name if different -->
+        <img src="sni-logo.png" alt="SNI Industrial Surplus logo" class="logo-img" />
+        <div>
+          SNI INDUSTRIAL SURPLUS
+          <div><span class="sub">Nationwide Surplus Electrical Buyers · No Fees, Ever</span></div>
+        </div>
+      </div>
+      <div class="nav-right">
+        <nav class="nav-links">
+          <a href="#what-we-buy">What We Buy</a>
+          <a href="#how-It-works">How It Works</a>
+          <a href="#service-areas">Service Areas</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <div class="nav-cta">
+          <div class="phone-tag">
+            <span>📞</span>
+            <a href="tel:19567804633">(956) 780-4633</a>
+          </div>
+          <a href="#quote-form" class="btn btn-primary">Get a Free Quote</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-badge">
+          <span>⚡</span> SNI Industrial Surplus · Free, No-Obligation Quotes
+        </div>
+        <h1>
+          Sell Your <span>Surplus Electrical Equipment</span> for Fast Cash – Anywhere in the U.S.
+        </h1>
+        <p class="hero-sub">
+          We buy surplus circuit breakers, switchgear, panels, MCCs, transformers, and more from contractors, facilities, warehouses, and demolition projects in all 50 states. <strong>You never pay any fees – we pay you.</strong>
+        </p>
+
+        <ul class="hero-list">
+          <li><span>✓</span> New, used & obsolete equipment accepted</li>
+          <li><span>✓</span> We buy single items & full truckloads</li>
+          <li><span>✓</span> Free quotes & no obligation to sell</li>
+          <li><span>✓</span> Freight & pickup options nationwide</li>
+        </ul>
+
+        <div class="hero-cta-row">
+          <a href="tel:19567804633" class="btn btn-primary">
+            Call Now: (956) 780-4633
+          </a>
+          <a href="mailto:rosariosamuel528@aol.com" class="btn btn-outline">
+            Email Photos & List (Free)
+          </a>
+        </div>
+        <div class="hero-note">
+          Prefer text? Send photos and details to <strong>(956) 780-4633</strong> – quotes are always free.
+        </div>
+      </div>
+
+      <!-- Hero Form Card -->
+      <div class="hero-form-card" id="quote-form">
+        <h2>Get a Free Surplus Offer</h2>
+        <p>
+          Tell us what you have. Attach photos or a list for the quickest and most accurate quote – free and no obligation.
+        </p>
+        <form>
+          <div class="form-grid">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" type="text" placeholder="Your name" />
+            </div>
+            <div>
+              <label for="company">Company</label>
+              <input id="company" type="text" placeholder="Company (optional)" />
+            </div>
+            <div>
+              <label for="phone">Phone</label>
+              <input id="phone" type="tel" placeholder="Best number to reach you" />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input
+                id="email"
+                type="email"
+                placeholder="rosariosamuel528@aol.com"
+              />
+            </div>
+            <div class="form-full">
+              <label for="location">Location</label>
+              <input
+                id="location"
+                type="text"
+                placeholder="City, State (we buy in all 50 states)"
+              />
+            </div>
+            <div class="form-full">
+              <label for="equipment">
+                What equipment do you want to sell?
+              </label>
+              <textarea
+                id="equipment"
+                placeholder="Example: (40) Square D QO breakers, (3) 480V panels, (1) 800A main breaker, etc."
+              ></textarea>
+              <div class="helper">
+                Brand, amperage, voltage, and condition help us quote faster.
+              </div>
+            </div>
+            <div class="form-full">
+              <label for="photos">
+                Photos / files (send by email or text)
+              </label>
+              <div class="helper">
+                After submitting, email photos to
+                <strong>rosariosamuel528@aol.com</strong> or text them to
+                <strong>(956) 780-4633</strong>. There is no cost or obligation.
+              </div>
+            </div>
+          </div>
+          <div class="form-footer">
+            <button type="button" class="btn btn-primary">
+              Submit Info (Free Quote)
+            </button>
+            <div class="privacy">
+              This form does not upload files yet. After clicking, simply email
+              or text your photos and list. Quotes are 100% free and you are
+              never charged any fees – we only pay you for equipment we buy.
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- What we buy -->
+  <section id="what-we-buy">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-kicker">What We Buy</div>
+        <h2 class="section-title">Surplus Electrical Equipment We Purchase</h2>
+        <p class="section-sub">
+          SNI Industrial Surplus buys a wide range of commercial and industrial
+          electrical equipment – from small breakers to full rooms of switchgear – nationwide, with free quotes.
+        </p>
+      </div>
+
+      <div class="equipment-grid">
+        <div class="equip-block">
+          <h3><span>🧰</span> Circuit Breakers & Panels</h3>
+          <ul>
+            <li>New, used, and obsolete breakers (all major brands)</li>
+            <li>Panelboards & loadcenters (NEMA 1 & 3R)</li>
+            <li>Bolt-on, plug-in, molded case, MCCBs</li>
+            <li>Main breakers, sub-feed breakers, fusible panels</li>
+          </ul>
+        </div>
+        <div class="equip-block">
+          <h3><span>🏭</span> Switchgear & Switchboards</h3>
+          <ul>
+            <li>Low & medium-voltage switchgear lineups</li>
+            <li>Switchboards, distribution sections, mains</li>
+            <li>Bus duct & busway, fusible switches</li>
+            <li>Demolition & decommissioned electrical rooms</li>
+          </ul>
+        </div>
+        <div class="equip-block">
+          <h3><span>⚙️</span> Motor Control & Drives</h3>
+          <ul>
+            <li>Motor control centers (MCC buckets & lineups)</li>
+            <li>Starters, contactors, overloads</li>
+            <li>VFDs, soft starters, control panels</li>
+            <li>Industrial control & automation components</li>
+          </ul>
+        </div>
+        <div class="equip-block">
+          <h3><span>🔌</span> Transformers & Other</h3>
+          <ul>
+            <li>Dry-type and pad-mount transformers</li>
+            <li>Disconnects, safety switches, fused switches</li>
+            <li>Bus plugs, metering, distribution gear</li>
+            <li>Large lots, palletized surplus, warehouse cleanouts</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why choose us -->
+  <section>
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-kicker">Why SNI</div>
+        <h2 class="section-title">Why Sell to SNI Industrial Surplus?</h2>
+        <p class="section-sub">
+          We combine the convenience of a local buyer with the pricing of a
+          national reseller – serving customers across the entire United States –
+          and our quotes are always free.
+        </p>
+      </div>
+
+      <div class="cards">
+        <div class="card">
+          <div class="icon-circle">💵</div>
+          <h3>Fair, Straightforward Offers</h3>
+          <p>
+            We know the real value of surplus electrical gear. We make
+            competitive, no-pressure offers based on brand, condition, and
+            demand – no lowballing, no hidden fees.
+          </p>
+        </div>
+        <div class="card">
+          <div class="icon-circle">⏱️</div>
+          <h3>Fast, Free Quotes</h3>
+          <p>
+            Send photos and a quick list and we’ll respond as fast as possible.
+            Quotes are 100% free and you’re never obligated to accept – the
+            decision is always yours.
+          </p>
+        </div>
+        <div class="card">
+          <div class="icon-circle">🚚</div>
+          <h3>Nationwide Pickup & Freight</h3>
+          <p>
+            We help coordinate freight, pickup, or LTL shipments across the U.S.
+            Whether you have a few pallets or a full room of gear, we’ll work
+            with your schedule.
+          </p>
+        </div>
+        <div class="card">
+          <div class="icon-circle">🤝</div>
+          <h3>Built for Contractors & Facilities</h3>
+          <p>
+            We work with electrical contractors, property managers, warehouses,
+            demolition companies, and industrial plants – making cleanouts and
+            change-outs easier and more profitable nationwide.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how-it-works">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-kicker">Process</div>
+        <h2 class="section-title">How the Selling Process Works</h2>
+        <p class="section-sub">
+          Simple, clear, and fast – whether you’re across town or across the
+          country. Every step is free to you.
+        </p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Send Photos & Details (Free)</h3>
+          <p>
+            Text or email photos of your equipment, along with any labels,
+            brand names, and quantities. A quick written list helps us quote
+            accurately – there is no cost to get a quote.
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Get a Cash Offer</h3>
+          <p>
+            We review your equipment and send a clear offer. For larger jobs,
+            we may ask a few follow-up questions or schedule a virtual or
+            in-person walkthrough depending on your location.
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Schedule Pickup or Shipping</h3>
+          <p>
+            Once we agree on a price, we coordinate pickup or freight anywhere
+            in the U.S. We work around your job schedule to keep things moving
+            smoothly.
+          </p>
+        </div>
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Get Paid – No Fees</h3>
+          <p>
+            You get paid as agreed – cash, Zelle, ACH, or company check.
+            <strong>You never pay us anything.</strong> We only pay you for the
+            equipment we buy.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service areas -->
+  <section id="service-areas">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-kicker">Service Areas</div>
+        <h2 class="section-title">We Buy Surplus Electrical in All 50 States</h2>
+        <p class="section-sub">
+          SNI Industrial Surplus serves customers nationwide. If you can send
+          photos and ship or coordinate pickup, we can usually buy – and getting
+          a quote is always free.
+        </p>
+      </div>
+
+      <div class="service-layout">
+        <div>
+          <p style="font-size:0.9rem; color:var(--muted); margin-bottom:0.8rem;">
+            We regularly work with contractors, facilities, and demolition
+            companies in major metros and smaller cities across the U.S. From
+            local shop cleanouts to large industrial projects, we’re set up to
+            buy and move your surplus – at no cost to you.
+          </p>
+
+          <div class="service-list">
+            <div class="service-tag">
+              <span>🇺🇸</span> Nationwide – all 50 states
+            </div>
+            <div class="service-tag">
+              <span>📍</span> Major metros & small towns
+            </div>
+            <div class="service-tag">
+              <span>🏗️</span> Demo & renovation projects
+            </div>
+            <div class="service-tag">
+              <span>🏭</span> Commercial & industrial facilities
+            </div>
+            <div class="service-tag">
+              <span>🚚</span> Palletized freight & LTL
+            </div>
+            <div class="service-tag">
+              <span>🧹</span> Warehouse & shop cleanouts
+            </div>
+          </div>
+        </div>
+
+        <div class="service-card">
+          <h3>Not sure if we can buy your equipment?</h3>
+          <p>
+            If it’s electrical gear from a commercial or industrial setting in
+            the U.S., there’s a good chance we’re interested – even if it’s
+            older or no longer in production. It costs you nothing to ask.
+          </p>
+          <p style="margin-bottom:0.4rem;">
+            The easiest way to find out: send a few clear photos of the gear
+            and labels to:
+          </p>
+          <p style="margin-bottom:0.3rem;">
+            <strong>Text:</strong> <a href="tel:19567804633">(956) 780-4633</a>
+          </p>
+          <p style="margin-bottom:0.3rem;">
+            <strong>Email:</strong>
+            <a href="mailto:rosariosamuel528@aol.com">
+              rosariosamuel528@aol.com
+            </a>
+          </p>
+          <a href="mailto:rosariosamuel528@aol.com">
+            Click here to start an email with your photos →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq">
+    <div class="section-inner">
+      <div class="section-header">
+        <div class="section-kicker">FAQ</div>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <p class="section-sub">
+          A few common questions we get from contractors, facilities, and
+          demolition crews selling surplus electrical equipment across the U.S.
+        </p>
+      </div>
+
+      <div class="faq-grid">
+        <div>
+          <div class="faq-item">
+            <h3>Do you buy used or only new equipment?</h3>
+            <p>
+              We buy <strong>new, used, and even some obsolete</strong>
+              equipment, as long as it’s in reasonable condition. Photos of
+              labels, breakers, interiors, and nameplates help us make a fair
+              offer – at no cost to you.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>How do you decide what to pay?</h3>
+            <p>
+              We consider brand, age, condition, and current demand. Large
+              deals, popular brands, and clean equipment usually bring the best
+              pricing. We’ll always be upfront about how we’re looking at a
+              deal, and quotes are free.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>Can you come out to look at a big job?</h3>
+            <p>
+              For bigger projects or full electrical rooms, we may be able to
+              walk the job, review the gear in person, or work from a detailed
+              photo/video walkthrough depending on your location.
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="faq-item">
+            <h3>Do you charge any fees or commissions?</h3>
+            <p>
+              No. <strong>There are zero fees to you.</strong> We don’t charge
+              inspection fees, commissions, or listing fees. We simply make you
+              an offer, and if you accept, we pay you for the equipment.
+            </p>
+          </div>
+          <div class="faq-item">
+            <h3>How do I get the equipment to you?</h3>
+            <p>
+              For local deals, we can sometimes pick up directly. For
+              out-of-area deals, we usually work with palletized freight, LTL,
+              or truckload shipments. We’ll help you figure out the easiest
+              option from your state.
+            </p>
+          </div>
+          <div class="faq-highlight">
+            Have a question not listed here? Call or text us at
+            <strong>(956) 780-4633</strong> or email
+            <strong>rosariosamuel528@aol.com</strong>. Quotes are always free
+            and there is never any obligation to sell.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA -->
+  <section class="bottom-cta">
+    <div class="bottom-inner">
+      <div class="bottom-left">
+        <h2>Ready to Turn Surplus Electrical Into Cash?</h2>
+        <p>
+          SNI Industrial Surplus makes it simple to sell extra gear from
+          projects, change-outs, and warehouse cleanups – in all 50 states.
+          Getting a quote is 100% free.
+        </p>
+
+        <ul class="bottom-list">
+          <li><span>✓</span> New, used, and obsolete breakers & gear</li>
+          <li><span>✓</span> We buy from contractors, facilities & demo crews</li>
+          <li><span>✓</span> Fair offers, fast response, and honest service</li>
+        </ul>
+
+        <div class="hero-cta-row">
+          <a href="tel:19567804633" class="btn btn-primary">
+            Call / Text: (956) 780-4633
+          </a>
+          <a href="mailto:rosariosamuel528@aol.com" class="btn btn-outline">
+            Email Photos & List (Free)
+          </a>
+        </div>
+        <div class="bottom-tagline">
+          Send photos any time – we’ll review your equipment and get back to
+          you with a free, no-obligation offer.
+        </div>
+      </div>
+
+      <div class="bottom-contact-card">
+        <h3>Contact SNI Industrial Surplus</h3>
+        <p>
+          Reach out with photos of your surplus electrical gear and a quick
+          description. We’ll let you know what we can pay, no matter what state
+          you’re in – and it never costs you anything.
+        </p>
+        <div class="row">
+          <div class="label">Phone / Text</div>
+          <div><a href="tel:19567804633">(956) 780-4633</a></div>
+        </div>
+        <div class="row">
+          <div class="label">Email</div>
+          <div>
+            <a href="mailto:rosariosamuel528@aol.com">
+              rosariosamuel528@aol.com
+            </a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="label">Business Name</div>
+          <div>SNI Industrial Surplus</div>
+        </div>
+        <div class="row">
+          <div class="label">How to Start</div>
+          <div>
+            1) Take clear photos of your equipment<br />
+            2) Text or email them with quantities & location<br />
+            3) We’ll reply with a free quote and next steps
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div>
+        © <span id="year"></span> SNI Industrial Surplus. All rights reserved.
+      </div>
+      <div>
+        Call <a href="tel:19567804633">(956) 780-4633</a> ·
+        <a href="mailto:rosariosamuel528@aol.com">rosariosamuel528@aol.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Set current year in footer
+    document.getElementById("year").textContent =
+      new Date().getFullYear().toString();
+  </script>
+</body>
+</html>
